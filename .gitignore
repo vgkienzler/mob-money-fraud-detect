@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+*.RData
+*.rds
+*.dat
+*.Rproj
+*.csv
+*.zip
+fraud-detection_cache/*
+fraud-detection_files/*
+!transactions-raw.rds
+to-delete-later.R
+

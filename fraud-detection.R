@@ -73,6 +73,7 @@ ifelse(!dir.exists(file.path("data")), dir.create(file.path("data")), FALSE)
 # If "no_local_data" is set to "TRUE", code will download and process data 
 # as if it doesn't exist locally.
 # If set to "FALSE", code will load local data to speed up runtime.
+# Local data is generated once the script has been run in its entirety.
 no_local_data <- TRUE
 models_rerun <- TRUE
 
@@ -867,7 +868,7 @@ kable(table(
   , col.names = c("count","frequency"))
 
 # Do some cleaning
-rm(fraud_count, playset_FRAUD, same_amount_summary, fraud_count)
+rm(playset_FRAUD, same_amount_summary, fraud_count)
 
 
 ## ---- Adding countOrig and countDest features, message=FALSE, warning=FALSE, eval=no_local_data-----------------------------------
@@ -1680,6 +1681,8 @@ display_best_perf <- function(model_object,
   return(conf_matrix[["Version"]])
 }
 
+## ----End of function definition in appendix in the .pdf report and .rmd file.
+## From now on the various machine learning models are run.
 
 
 ## ----Run logistic algorithm, results=FALSE, warning=FALSE, message=FALSE----------------------------------------------------------
